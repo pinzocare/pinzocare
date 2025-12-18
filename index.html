@@ -3,144 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PINZO CleanCare | Powerful Cleaning Solutions</title>
+<title>PINZO CleanCare</title>
 
 <style>
-:root {
-  --blue:#0b3c91;
-  --green:#1fa45b;
-  --light:#f4f7fb;
-  --dark:#1c1c1c;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #222;
 }
 
-body {
-  margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  color:var(--dark);
-  background:#fff;
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
 /* HERO */
 .hero {
-  background:linear-gradient(135deg, var(--blue), #062c6f);
-  color:#fff;
-  padding:90px 20px;
-  text-align:center;
+  background: linear-gradient(120deg, #0b3c91, #0a5fd9);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
 }
 .hero h1 {
-  font-size:52px;
-  margin-bottom:15px;
-  letter-spacing:1px;
+  font-size: 56px;
+  margin-bottom: 15px;
 }
 .hero p {
-  font-size:20px;
-  max-width:800px;
-  margin:auto;
-}
-.hero span {
-  color:#9effc2;
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* SECTIONS */
-section {
-  padding:70px 20px;
-  max-width:1200px;
-  margin:auto;
-}
+/* SECTION TITLES */
 h2 {
-  text-align:center;
-  font-size:36px;
-  color:var(--blue);
-  margin-bottom:40px;
+  text-align: center;
+  font-size: 36px;
+  color: #0b3c91;
+  margin-bottom: 40px;
 }
 
 /* ABOUT */
-.about {
-  font-size:18px;
-  text-align:center;
-  max-width:900px;
-  margin:auto;
-  line-height:1.7;
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 /* PRODUCTS */
 .products {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
 .card {
-  background:#fff;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  padding:30px;
-  text-align:center;
-  transition:transform .3s;
-}
-.card:hover {
-  transform:translateY(-6px);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
 }
 .card h3 {
-  color:var(--green);
-  margin-bottom:15px;
-  font-size:22px;
+  color: #1fa45b;
+  margin-bottom: 10px;
 }
 .card p {
-  font-size:16px;
+  font-size: 15px;
 }
 
 /* QUALITY */
 .quality {
-  background:var(--light);
-  border-radius:20px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 50px;
+  text-align: center;
 }
 .quality p {
-  text-align:center;
-  font-size:18px;
-  max-width:900px;
-  margin:auto;
+  font-size: 18px;
+  max-width: 850px;
+  margin: auto;
 }
 
 /* CONTACT */
 .contact {
-  background:var(--blue);
-  color:#fff;
-  border-radius:20px;
-  text-align:center;
-  padding:60px 20px;
-}
-.contact h2 {
-  color:#fff;
+  background: #0b3c91;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
 }
 .contact p {
-  font-size:18px;
+  font-size: 18px;
 }
 .contact a {
-  color:#9effc2;
-  text-decoration:none;
-  font-weight:bold;
+  color: #a8ffcc;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* FOOTER */
 footer {
-  background:#0a0a0a;
-  color:#bbb;
-  text-align:center;
-  padding:20px;
-  font-size:14px;
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
 
-/* WHATSAPP */
-.whatsapp {
-  position:fixed;
-  bottom:22px;
-  right:22px;
-  background:#25d366;
-  color:#fff;
-  padding:16px 20px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
 }
 </style>
 </head>
@@ -149,66 +134,61 @@ footer {
 
 <div class="hero">
   <h1>PINZO</h1>
-  <p><span>Deep Clean.</span> Powerful Protection. Long-Lasting Freshness.</p>
+  <p>Deep Clean with Long-Lasting Freshness  
+  <br>Reliable cleaning solutions for homes & institutions</p>
 </div>
 
-<section>
+<div class="container about">
   <h2>About PINZO</h2>
-  <p class="about">
-    PINZO CleanCare is a modern Indian home-care brand delivering
-    powerful and reliable cleaning solutions. Designed for today’s
-    households, PINZO products combine effective cleaning performance
-    with freshness you can trust.
+  <p>
+    PINZO CleanCare is an Indian home-care brand offering effective cleaning
+    products designed for everyday hygiene. Our formulations focus on power,
+    freshness and reliability for modern Indian households.
   </p>
-</section>
+</div>
 
-<section>
+<div class="container">
   <h2>Our Products</h2>
   <div class="products">
     <div class="card">
-      <h3>PINZO Toilet Cleaner</h3>
-      <p>Thick liquid formula that removes tough stains and keeps toilets hygienic.</p>
+      <h3>Toilet Cleaner</h3>
+      <p>Removes tough stains and kills germs effectively.</p>
     </div>
     <div class="card">
-      <h3>PINZO Floor Cleaner</h3>
-      <p>Gentle on floors, tough on dirt. Leaves a clean and refreshing finish.</p>
+      <h3>Floor Cleaner</h3>
+      <p>Powerful cleaning with a fresh and pleasant fragrance.</p>
     </div>
     <div class="card">
-      <h3>PINZO Phenyl</h3>
-      <p>Strong disinfectant action with long-lasting fragrance.</p>
+      <h3>Phenyl</h3>
+      <p>Strong disinfectant for daily floor hygiene.</p>
     </div>
     <div class="card">
-      <h3>PINZO Bathroom & Tap Cleaner</h3>
-      <p>Removes limescale and stains to restore shine and cleanliness.</p>
+      <h3>Bathroom & Tap Cleaner</h3>
+      <p>Removes limescale and restores shine.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section class="quality">
+<div class="container quality">
   <h2>Quality & Safety</h2>
   <p>
-    All PINZO products are developed using quality-checked raw materials
-    and controlled formulations, ensuring effective cleaning with clear
-    safety and usage instructions.
+    PINZO products are manufactured using quality-checked raw materials
+    with clear usage instructions to ensure safety and performance.
   </p>
-</section>
+</div>
 
-<section>
-  <div class="contact">
-    <h2>Contact PINZO</h2>
-    <p><strong>PINZO CleanCare</strong></p>
-    <p>Lucknow, Uttar Pradesh</p>
-    <p>📞 WhatsApp: <a href="https://wa.me/919820420420">+91 98204 20420</a></p>
-    <p>📧 Email: pinzoclean@gmail.com</p>
-    <p>Udyam Registered Micro Enterprise</p>
-  </div>
-</section>
+<div class="contact">
+  <h2>Contact Us</h2>
+  <p><strong>PINZO CleanCare</strong></p>
+  <p>Lucknow, Uttar Pradesh</p>
+  <p>📞 WhatsApp: <a href="https://wa.me/919820420420">+91 98204 20420</a></p>
+  <p>📧 Email: pinzoclean@gmail.com</p>
+  <p>Udyam Registered MSME</p>
+</div>
 
 <footer>
-  © PINZO CleanCare | Made in India | All Rights Reserved
+  © PINZO CleanCare | Made in India
 </footer>
-
-<a class="whatsapp" href="https://wa.me/919820420420">WhatsApp</a>
 
 </body>
 </html>
